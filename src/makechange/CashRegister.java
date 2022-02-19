@@ -12,11 +12,11 @@ public class CashRegister {
 
 		System.out.println("What is the price of the item?");
 		itemPrice = sc.nextDouble();
-		System.out.println(itemPrice);
+		// System.out.println(itemPrice);
 
 		System.out.println("How much money was tendered by the customer?");
 		amountTendered = sc.nextDouble();
-		System.out.println(amountTendered);
+		// System.out.println(amountTendered);
 		changeAmount = amountTendered - itemPrice;
 		// System.out.println(changeAmount);
 		sc.close();
@@ -28,53 +28,77 @@ public class CashRegister {
 		} else {
 			if (changeAmount >= 100) {
 				int numHundreds = (int) (changeAmount / 100);
-				System.out.println(numHundreds + " Hundreds");
+				System.out.println(numHundreds + " Hundred Dollar Bills");
 				changeAmount = changeAmount % 100;
 			}
 			if (changeAmount >= 50) {
 				int numFifties = (int) (changeAmount / 50);
-				System.out.println(numFifties + " Fifties");
+				System.out.println(numFifties + " Fifty Dollar Bill");
 				changeAmount = changeAmount % 50;
 			}
 			if (changeAmount >= 20) {
 				int numTwenties = (int) (changeAmount / 20);
-				System.out.println(numTwenties + " Twenties");
+				if (numTwenties == 1) {
+					System.out.println("1 Twenty Dollar Bill");
+				} else if (numTwenties > 1) {
+					System.out.println(numTwenties + " Twenty Dollar Bills");
+				}
 				changeAmount = changeAmount % 20;
 			}
 			if (changeAmount >= 10) {
 				int numTens = (int) (changeAmount / 10);
-				System.out.println(numTens + " Tens");
+				if (numTens == 1) {
+					System.out.println("1 Ten Dollar Bill");
+				} else if (numTens > 1) {
+					System.out.println(numTens + " Ten Dollar Bills");
+				}
 				changeAmount = changeAmount % 10;
 			}
 			if (changeAmount >= 5) {
 				int numFives = (int) (changeAmount / 5);
-				System.out.println(numFives + " Fives");
+				System.out.println(numFives + " Five Dollar Bill");
 				changeAmount = changeAmount % 5;
 			}
 			if (changeAmount >= 1) {
 				int numOnes = (int) (changeAmount / 1);
-				System.out.println(numOnes + " Ones");
+				if (numOnes == 1) {
+					System.out.println("1 One Dollar Bill");
+				} else if (numOnes > 1) {
+					System.out.println(numOnes + " One Dollar Bills");
+				}
 				changeAmount = changeAmount % 1;
 			}
 			if (changeAmount >= 0.25) {
 				int numQuarters = (int) (changeAmount / 0.25);
-				System.out.println(numQuarters + " Quarters");
+				if (numQuarters == 1) {
+					System.out.println("1 Quarter");
+				} else if (numQuarters > 1) {
+					System.out.println(numQuarters + " Quarters");
+				}
 				changeAmount = changeAmount % 0.25;
 			}
 			if (changeAmount >= 0.10) {
 				int numDimes = (int) (changeAmount / 0.10);
-				System.out.println(numDimes + " Dimes");
+				if (numDimes == 1) {
+					System.out.println("1 Dime");
+				} else if (numDimes > 1) {
+					System.out.println(numDimes + " Dimes");
+				}
 				changeAmount = changeAmount % 0.10;
 			}
 			if (changeAmount >= 0.05) {
 				int numNickels = (int) (changeAmount / 0.05);
-				System.out.println(numNickels + " Nickels");
+				System.out.println(numNickels + " Nickel");
 				changeAmount = changeAmount % 0.05;
 			}
 			if (changeAmount >= 0.01) {
 				changeAmount += 0.005;
 				int numPennies = (int) (changeAmount / 0.01);
-				System.out.println(numPennies + " Pennies \nHave a great day!");
+				if (numPennies == 1) {
+					System.out.println("1 Penny");
+				} else if (numPennies > 1) {
+					System.out.println(numPennies + " Pennies");
+				}
 				changeAmount = changeAmount % 0.01;
 			}
 		}

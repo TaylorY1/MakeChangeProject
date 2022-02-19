@@ -7,11 +7,11 @@ To start the program, run it. Next, enter the amount the item is that is to be p
 
 #### Lessons Learned
 
-Lots!
+Lots of lessons learned. Started with a while loop and ended up using if and nested if's to make more sense.
 
 #### Technologies Used
 
-sysout, loops,
+sysout, loops, if if else else, numerals, scanner, %
 
 #### What was fun?
-Lots of stuff! It was nice to see that it looks like I am catching on to this! 
+Lots of stuff! It was nice to see that it looks like I am catching on to this!
